@@ -8,7 +8,6 @@
 }
 
 .navbar-brand {
-  font-weight: bold;
   font-size: 24px;
   color: #333;
 }
@@ -18,7 +17,8 @@
 }
 
 .navbar-nav .nav-link {
-  font-weight: bold;
+  font-weight: lighter;
+  font-family: 'Roboto', sans-serif;
   color: #333;
   margin-left: 20px;
 }
@@ -35,7 +35,7 @@
   }
 
   to {
-    transform: rotate(360deg);
+    /* transform: rotate(360deg); */
   }
 }
 
@@ -57,6 +57,18 @@
 .navbar-collapse {
   transition: height 0.5s ease-in-out;
   height: auto !important;
+}
+
+
+p {
+  margin: 0;
+  display: flexbox;
+}
+
+h1 {
+  margin: 0;
+  display: flexbox;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
@@ -117,7 +129,7 @@ footer a {
 }
 
 footer a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 footer p {
@@ -130,7 +142,7 @@ footer p a {
 }
 
 footer p a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 footer ul {
@@ -291,3 +303,16 @@ footer ul li a::after {
 
 
 
+svg {
+  width: 110vw;
+  height: 110vh;
+}
+
+path {
+  fill: #555;
+  cursor: pointer;
+}
+
+path:hover {
+  fill: deepskyblue;
+}
