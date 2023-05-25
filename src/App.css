@@ -14,6 +14,21 @@
   color: #333;
 }
 
+.navbar-brand:hover {
+  color: #61dafb;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+@media (min-width: 992px) {
+  .navbar-brand img {
+    max-height: 60px;
+  }
+}
+
 .navbar-nav {
   display: inline-block;
 }
@@ -125,7 +140,7 @@ footer {
 }
 
 footer a {
-  color: #259cbd;
+  color: #0e7e86 !important;
   text-decoration: none;
 }
 
@@ -556,89 +571,66 @@ path.active
   fill: deepskyblue;
 }
 
-
-footer-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.footer-list {
+  display: inline-block !important;
+  flex-wrap: wrap;
   justify-content: center;
-  list-style: none;
+  margin-bottom: 20px;
+}
+
+.footer-list button {
+  background-color: transparent;
+  border: none;
   padding: 0;
-  margin: 0;
 }
 
-footer-list li {
-  margin: 10px 0;
-}
 
-footer-list li a {
+
+@media (min-width: 768px) {
+  .footer-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .col-md-4 {
+    width: 33.33%;
+    float: left;
+  }
+
+  .col-md-4 ul {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+.footer-list a {
   color: #61dafb;
   text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  margin-right: 10px;
 }
 
-footer-list li a:hover {
-  text-decoration: underline;
+.footer-list a:hover,
+.footer-list a:focus {
+  color: #fff;
 }
 
-footer-list li a::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #61dafb;
-  margin-top: 5px;
+.footer-list button:hover a,
+.footer-list button:focus a {
+  color: #fff;
 }
 
-footer-list li a:hover::after {
-  background-color: #61dafb;
+/* create three equal-width columns */
+.col-md-4 {
+  width: 33.33%;
+  float: left;
 }
 
-footer-list li a.active {
-  color: #61dafb;
+.col-md-4 ul {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
-
-footer-list li a.active::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #61dafb;
-  margin-top: 5px;
-}
-
-footer-list li a.active:hover::after {
-  background-color: #61dafb;
-}
-
-footer-list li a.active {
-  color: #61dafb;
-}
-
-footer-list li a.active::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #61dafb;
-  margin-top: 5px;
-}
-
-
-
-footer-list li a.active:hover::after {
-  background-color: #61dafb;
-}
-
-footer-list li a.active {
-  color: #61dafb;
-}
-
-footer-list li a.active::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #61dafb;
-  margin-top: 5px;
-}
-

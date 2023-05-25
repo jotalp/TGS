@@ -16,7 +16,7 @@ function SignUpModal() {
 
     return (
         <div>
-            <button onClick={() => setModalIsOpen(true)} className='btn btn-outline-primary'>Sign Up</button>            <Modal isOpen={modalIsOpen}>
+            <button onClick={() => setModalIsOpen(true)} className='btn btn-outline-secondary'>Sign Up</button>            <Modal isOpen={modalIsOpen}>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="email">Email address:</label>
@@ -31,7 +31,7 @@ function SignUpModal() {
                         <input type="password" className="form-control" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                     </div>
                     <button type="submit" className='btn btn-outline-primary'>Submit</button>
-                    <button className='btn btn btn-outline-primary' onClick={() => setModalIsOpen(false)}>Cancel</button>
+                    <button className='btn btn btn-outline-danger' onClick={() => setModalIsOpen(false)}>Cancel</button>
                 </form>
             </Modal>
         </div>

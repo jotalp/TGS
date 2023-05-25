@@ -4,19 +4,23 @@ import Modal from 'react-modal';
 import React, { useState } from 'react';
 import MySvgComponent from './components/MySvgComponent';
 import Footer from './components/Footer';
-import SignUpModal from './components/signUpComponent';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import LoginModal from './components/Login';
+import CountryList from './components/CountryList';
+
 
 Modal.setAppElement('#root');
 
-function App() {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
 
+function App() {
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   return (
     <div className="App">
       <header className="App-header">
         <DropdownMenu />
+        <LoginModal />
+        <CountryList />
 
         <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
           <ul className="modal-list">
@@ -53,21 +57,26 @@ function App() {
             <button onClick={() => setModalIsOpen(false)}>Close</button>
           </div>
         </Modal>
+
         <MySvgComponent setModalIsOpen={setModalIsOpen} />
-        <h1>My Site</h1>
-        <p>About Trademark Global Search:
+        <h1>Welcome To Trademark Global Search</h1>
 
-          At Trademark Global Search, we are a network of experienced lawyers specialized in the field of intellectual property since 1980. We are committed to providing comprehensive services related to patents and trademarks. To enhance our services, we have developed a user-friendly website, www.trademarksearchglobal.com, which enables you to conduct quick and efficient trademark searches and registrations around the world.
+        <p>Welcome to our network of experienced lawyers specializing in intellectual property law since 1980. We handle a wide range of practices related to patents and trademarks. To enhance our services, we have developed a user-friendly website, www.trademarksearchglobal.com, designed to facilitate quick and user-friendly trademark searches and registrations worldwide.<br /> <br />
 
-          Our team comprises skilled professionals who possess extensive experience in handling intellectual property matters on a global scale. We work in collaboration with leading international law firms, ensuring that you receive the best possible service.
+          Our team boasts extensive expertise in managing intellectual property matters on a global scale. We are dedicated to assisting you with any IP-related services you may require, and we can recommend internationally renowned law firms as needed.
+          <br /> <br />
 
-          Here's how we operate:
+          <h2>Here's how our process works:</h2> <br /> <br />
 
-          Once you approach us with your trademark query, we will assign a dedicated IP consultant who will handle all your requests concerning the country or jurisdiction of your interest. Our consultants have in-depth knowledge about the differing requirements and timeframes for intellectual property matters in different regions. They will provide you with expert advice and oversee the processes being handled by our partner attorneys, keeping you informed of any progress.
+          When you engage with us for trademark services, we will assign a dedicated IP consultant to work with you. Your consultant will handle all your IP service requests specific to your desired country or jurisdiction.
 
-          You can track the progress of your applications across multiple countries in real-time by contacting us via email, irrespective of the number of countries being processed.
+          Different countries and jurisdictions have unique requirements and timelines for intellectual property matters. Our consultants will provide expert advice and oversee the processes entrusted to the attorneys working with us, ensuring you are kept informed of any progress made.
 
-          We are dedicated to providing our clients with efficient and reliable services in the field of intellectual property. Choose Trademark Global Search to ensure that your trademark is protected worldwide.</p>
+          Rest assured, regardless of the number of countries involved in your service requests, you can monitor the progress of your applications by contacting us via email at www.tmsearchglobal@gmail.com.
+
+          We are committed to delivering exceptional service and protecting your intellectual property rights. Choose us for a seamless and efficient experience in trademark searches and registrations worldwide.</p>
+
+          
       </header>
       <Footer />
     </div>

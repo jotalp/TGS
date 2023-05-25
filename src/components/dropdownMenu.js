@@ -1,20 +1,15 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import "../App.css";
 import React from "react";
-import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SignUpModal from "./signUpComponent";
-import About from "../About";
 
 
 
 
-
-
-const DropdownMenu = () => {
+function DropdownMenu() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="/">TGL</a>
+            <a className="navbar-brand" href="/"> <img src="1.png" />  </a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -24,7 +19,7 @@ const DropdownMenu = () => {
                         <a className="nav-link" href="/">Home</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/About">About</a>
+                        <a className="nav-link" href="/src/About">About</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="/pricing">Pricing</a>
@@ -35,12 +30,9 @@ const DropdownMenu = () => {
                     <li className="nav-item">
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/search">Search</a>
+                        <a className="nav-link" href="/components/Shopping">Cart</a>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="/results">Results</a>
-                    </li>
-                    
+
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Trademarks
@@ -52,14 +44,15 @@ const DropdownMenu = () => {
                         </div>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/login">Login</a>
+                        <a className="nav-link" href="/components/Login">Login</a>
                     </li>
-                 </ul>
+                </ul>
+
                 <SignUpModal />
 
             </div>
         </nav>
     );
-};
+}
 
 export default DropdownMenu;
